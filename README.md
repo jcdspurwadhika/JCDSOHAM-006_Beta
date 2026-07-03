@@ -59,9 +59,29 @@ Coba langsung di: **https://telco-churn-app-23mxzztus2mdqyvwxu9bgw.streamlit.app
 
 ```
 .
+├── LICENSE                                # Lisensi proyek
 ├── Telco_Cust_Churn_FIXED.ipynb           # Notebook analisis end-to-end
 ├── WA_Fn-UseC_-Telco-Customer-Churn.csv   # Dataset mentah
+├── contoh_data_pelanggan.csv              # Contoh/template data untuk prediksi massal (batch)
+├── train_export.py                        # Script training & export model (churn_model.joblib)
+├── app.py                                 # Aplikasi Streamlit
+├── requirements.txt                       # Dependencies
+├── runtime.txt                            # Versi Python untuk deployment (Streamlit Cloud)
+├── churn_model.joblib                     # Model hasil training (siap pakai oleh app.py)
 └── README.md
+```
+
+## Menjalankan Secara Lokal
+
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Train & export model
+python train_export.py
+
+# 3. Jalankan aplikasi
+streamlit run app.py
 ```
 
 ## Tech Stack
